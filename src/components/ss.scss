@@ -1,0 +1,9 @@
+$color: #589017;
+
+.block {
+  color: $color;
+
+  .innerBlock {
+    background: $color;
+  }
+}

@@ -1,0 +1,77 @@
+.mainWrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    scroll-behavior: smooth;
+    /*background-image: url("../data/fonR.png");*/
+    color: #8f9396;
+    /*background: #e3dcdc;*/
+    /*justify-content: space-between;*/
+    /*background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(193, 231, 246) 100%);*/
+
+}
+/*@media(max-device-width: 678px) {*/
+@media (max-device-width: 850px) {
+    .mainWrapper {
+        width: 100vw;
+       /*// background-image: url("../data/fonPhone.jpg");*/
+    }
+}
+
+main {
+    display: flex;
+    flex: 1 1 auto;
+    /*height: 92vh;*/
+    /*background: #61dafb;*/
+    justify-content: center;
+    width: 100%;
+}
+/*@media(max-device-width: 678px) {*/
+/*!*@media (max-device-width: 825px) {*!*/
+/*    main {*/
+/*        padding: 5px;*/
+/*        width: 100vh;*/
+/*    }*/
+/*}*/
+
+header {
+    display: flex;
+    height: 8vh;
+    flex-direction: column;
+    /*background: linear-gradient(90deg, #727272 0%, #333333 100%);*/
+    /*background: #242323;*/
+    /*background-color: #b31919;*/
+    /*z-index: 40;*/
+
+}
+
+/*@media(max-device-width: 678px) {*/
+@media (max-device-width: 825px) {
+    header {
+        height: 110px;
+    }
+}
+
+footer {
+    z-index: 2;
+    display: flex;
+    color: #babab7;
+    height: 250px;
+    flex-direction: column;
+    font-weight: bold;
+    justify-content: center;
+    /*background: linear-gradient(90deg, rgb(113, 129, 126) 0%, rgb(23, 40, 45) 100%);*/
+    background: linear-gradient(90deg, #727272 0%, #333333 100%);
+}
+/*@media(max-device-width: 678px) {*/
+@media (max-device-width: 850px) {
+    footer {
+        height: 500px;
+        align-content: flex-start;
+        z-index: 0;
+    }
+}
+
+
+

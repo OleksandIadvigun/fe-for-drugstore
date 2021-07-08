@@ -1,0 +1,36 @@
+.whiteText{
+    color: #d9892c;
+    text-decoration: none;
+    margin-left: 1%;
+    transition: color;
+    transition-duration: 0.9s;
+}
+.whiteText:hover{
+    color: #d5cece;
+
+}
+.animate1{
+
+    moz-transition: all 1s ease;
+
+    webkit-transition: all 1s ease;
+
+    o-transition: all 1s ease;
+
+    transition: all 1s ease;
+
+}
+
+.animate1:hover{
+
+    moz-transform: rotate(360deg) scale(1.5);
+
+    webkit-transform: rotate(360deg) scale(1.5);
+
+    o-transform: rotate(360deg) scale(1.5);
+
+    ms-transform: rotate(360deg) scale(1.5);
+
+    transform: rotate(360deg) scale(1.5);
+
+}

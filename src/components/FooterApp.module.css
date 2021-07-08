@@ -1,0 +1,173 @@
+.wrapFooter{
+    background: #222228;
+    color: #d5cece;
+    font-size: medium;
+    padding: 30px;
+}
+
+
+.footerSocialMedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.footerSocialMediaIcon {
+    margin: 0px 4px;
+    width: 25px;
+    height: 25px;
+}
+
+.footerInfo  {
+    display: flex;
+    justify-content: center;
+    /*background: #181717;*/
+    font: 100% sans-serif;
+}
+
+/*@media(max-device-width: 678px) {*/
+@media(max-device-width: 850px) {
+    .footerInfo {
+        flex-direction: column;
+
+    }
+}
+.footerInfoLeft, .footerInfoCenter {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 30%;
+}
+.footerInfoRight{
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 30%;
+    align-self: flex-start;
+    text-align: end;
+    justify-content: end;
+}
+
+/*@media(max-device-width: 678px) {*/
+@media(max-device-width: 850px) {
+    .footerInfoLeft, .footerInfoCenter
+    {
+        font-size: 0.8rem;
+        width: 50%;
+        padding-bottom: 3px;
+        align-self: center;
+        border-bottom: 1px solid #bebaba;
+    }
+    .footerInfoRight{
+        font-size: 0.8rem;
+        width: 50%;
+        padding-bottom: 3px;
+        align-self: center;
+    }
+    .footerInfoName, .footerInfoEmail{
+        align-self: start;
+    }
+    .footerInfoNumber{
+        align-self: start;
+    }
+}
+
+.footerInfoNumber, .footerInfoName{
+    margin-bottom: 5px;
+}
+.footerInfoEmail {
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: center;
+}
+.footerStartContainer{
+    text-align: start;
+    align-self: flex-start;
+}
+.footerEndContainer{
+    text-align: start;
+    align-self: flex-end;
+}
+@media(max-device-width: 850px) {
+    .footerEndContainer{
+        align-self: flex-start;
+    }
+}
+.elementCenter{
+    padding-top: 1px;
+    padding-bottom: 5px;
+}
+.elementCenter:hover{
+    cursor: pointer;
+    color: #d26b09;
+}
+.footerInfoName, .footerInfoReturns {
+    text-align: start;
+}
+.footerInfoReturns:hover{
+    cursor: pointer;
+    color: #d26b09;
+}
+.footerInfoReturns{
+    margin-bottom: 6px;
+}
+.footerInfoEmail, .footerInfoTerms {
+    text-align: center;
+}
+
+
+.footerInfoNumber {
+    text-align: end;
+    margin-bottom: 5px;
+
+}
+.footerInfoContact{
+    margin-bottom: 5px;
+    border-radius: 1px;
+    border: 1px solid;
+    padding: 4px 10px;
+    width: fit-content;
+    /*text-align: center;*/
+    align-self: start;
+}
+/*@media(max-device-width: 678px) {*/
+@media(max-device-width: 850px) {
+    .footerInfoContact{
+        align-self: center;
+        width: fit-content;
+    }
+}
+.footerInfoContact:hover{
+    color: #d26b09;
+    cursor: pointer;
+}
+.footerDate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footerSeparator {
+    flex-grow: 1;
+    border: none;
+    height: 1px;
+    background-color: lightgoldenrodyellow;
+    width: 100%;
+}
+
+.footerName {
+    display: flex;
+    justify-content: center;
+}
+
+.footerBottomName {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin: 0px 20px;
+}
+
+
+

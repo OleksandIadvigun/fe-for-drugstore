@@ -1,0 +1,17 @@
+.myNode-enter {
+    opacity: 0;
+}
+.myNode-enter-active {
+    opacity: 1;
+    transition: opacity 1000ms;
+}
+.myNode-exit {
+    opacity: 1;
+}
+.myNode-exit-active {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+
+

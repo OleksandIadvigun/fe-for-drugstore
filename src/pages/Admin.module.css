@@ -1,0 +1,8 @@
+.buttonWidthMobile {
+    width: 23vw;
+}
+@media (max-device-width: 825px) {
+    .buttonWidthMobile {
+        width: 75vw;
+    }
+}

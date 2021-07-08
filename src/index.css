@@ -1,3 +1,13 @@
+:root {
+  --main-Bg-Color: linear-gradient(to right, #b92b27, #1565c0);
+  --box-log-color: #2d2d38;
+  --input-hover-submit-background: #41ba83;
+  --input-border: 2px solid #3498db;
+  --input-color: white;
+  --input-border-color-focus: #d48103;
+  --input-border-submit: 2px solid #2ecc71;
+
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +20,57 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+alert {
+  position: absolute;
+  width:40%; margin-top: 40%;
+}
+.movePage {
+  position: absolute;
+}
+
+.movePage-enter-active {
+  animation: fadeIN 1s forwards;
+}
+
+.movePage-exit-active {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeIN {
+  0%{
+    opacity: 0;
+    transform: translateX(-1000px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeOut {
+  0%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100%{
+    opacity: 0;
+    transform: translateX(1000px);
+  }
+}
+
+.myNode-enter {
+  opacity: 0;
+}
+.myNode-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms;
+}
+.myNode-exit {
+  opacity: 1;
+}
+.myNode-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
 }

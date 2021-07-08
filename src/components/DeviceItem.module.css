@@ -1,0 +1,24 @@
+
+.marginMobile {
+    margin-right: 12px;
+    display: flex;
+    justify-content: start;
+    width: 220px
+}
+@media (max-device-width: 825px) {
+    .marginMobile {
+        margin-right: 0;
+        width: 170px;
+    }
+}
+
+.sizeMobile{
+width:210px;
+height:210px;
+}
+@media (max-device-width: 825px) {
+    .sizeMobile{
+        width:165px;
+        height:165px;
+    }
+}

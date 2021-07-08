@@ -1,0 +1,12 @@
+.wrap{
+    min-height: 83vh;
+    width: 100vw;
+    /*background: #2ecc71;*/
+}
+
+.pagin{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+

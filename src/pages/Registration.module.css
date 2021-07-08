@@ -1,0 +1,108 @@
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: var(--main-Bg-Color);
+    height: 92vh;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.box {
+    color: #d5cece;
+    position: relative;
+    width: 500px;
+    padding: 40px;
+    background: var(--box-log-color);
+    text-align: center;
+    transition: 0.25s;
+    border-radius: 5px;
+}
+
+.box input[type="text"],
+.box input[type="email"],
+.box input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: var(--input-border);
+    padding: 10px 10px;
+    width: 250px;
+    outline: none;
+    color: var(--input-color);
+    border-radius: 24px;
+    transition: 0.25s
+}
+
+.box h1 {
+    color: var(--input-color);
+    text-transform: uppercase;
+    font-weight: 500
+}
+
+.box input[type="text"]:focus,
+.box input[type="email"]:focus,
+.box input[type="password"]:focus {
+    width: 300px;
+    border-color: var(--input-border-color-focus)
+}
+
+.box input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: var(--input-border-submit);
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer
+}
+
+.box input[type="submit"]:hover {
+    background: var(--input-hover-submit-background)
+}
+.loadingButton{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border: var(--input-border-submit);
+    padding: 10px 15px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    animation: glowing 1300ms infinite;
+}
+@keyframes glowing {
+    0% { background-color: var(--input-hover-submit-background); box-shadow: 0 0 3px #2ba805; }
+    50% { background-color: #64e78d; box-shadow: 0 0 10px #6bfc42; }
+    100% { background-color: var(--input-hover-submit-background); box-shadow: 0 0 3px #2ba805; }
+}
+.href{
+    color: #3498db;
+    text-decoration: none;
+}
+
+.href:hover{
+    color: #5f89af;
+}

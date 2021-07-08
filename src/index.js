@@ -1,17 +1,36 @@
-import React from 'react';
+import React, {createContext} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import UserStore from "./store/UserStore";
+import DeviceStore from "./store/DeviceStore";
+import * as PropTypes from "prop-types";
+import AlertTemplate from "react-alert-template-basic";
+import {positions, transitions,Provider as AlertProvider} from "react-alert";
 
+export const Context = createContext(null)
+
+AlertProvider.propTypes = {
+    template: PropTypes.element,
+    children: PropTypes.node
+};
+const options = {
+    position: positions.TOP_CENTER,
+    timeout: 5000,
+    offset: '30px',
+    type: 'error',
+    transition: transitions.SCALE,
+}
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <AlertProvider template={AlertTemplate}{...options}>
+    <Context.Provider value={{
+            user: new UserStore(),
+            device: new DeviceStore(),
+        }}>
+        <App/>
+    </Context.Provider>
+    </AlertProvider>,
+    document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

@@ -1,0 +1,14 @@
+
+@media (max-device-width: 825px) {
+    .phoneTypeBar {
+        display: flex;
+        justify-content: center;
+        /*background: #5f89af;*/
+    }
+}
+
+@media (max-device-width: 825px) {
+    .cardSize {
+
+    }
+}
