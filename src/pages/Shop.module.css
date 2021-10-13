@@ -1,6 +1,7 @@
 .wrap{
     min-height: 83vh;
     width: 100vw;
+    margin-top: 20px;
     /*background: #2ecc71;*/
 }
 
@@ -9,4 +10,5 @@
     justify-content: center;
     height: 100px;
 }
+
 

@@ -41,7 +41,6 @@ const Auth = observer(() => {
                 customAlert.show(e.response.data.message)
             }
         }
-
     }
 
     return (
@@ -72,13 +71,13 @@ const Auth = observer(() => {
                         <Row className="d-flex justify-content-center mt-3">
                             <span>Not registered? <NavLink to={REGISTRATION_ROUTE} className={styles.href}>Sign In</NavLink></span>
                             <button className="btn-warning mt-3 pe-lg-2 btn-sm border-1 w-auto"
-                            onClick={(e)=>submit(e)}
+                            // onClick={(e)=>submit(e)}
                             >Enter</button>
                         </Row> :
                         <Row className="d-flex justify-content-center mt-3">
                             <span>Do you have account? <NavLink to={LOGIN_ROUTE} className={styles.href}>Login</NavLink></span>
                         <button className="btn-warning mt-3 pe-lg-2 btn-sm border-1 w-auto align-self-center"
-                                onClick={(e)=>submit(e)}
+                                // onClick={(e)=>submit(e)}
                         >Sign In</button>
                         </Row> }
                 </Form>

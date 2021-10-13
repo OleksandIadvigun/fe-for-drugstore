@@ -1,3 +1,5 @@
+@import "../node_modules/react-image-gallery/styles/css/image-gallery.css";
+
 :root {
   --main-Bg-Color: linear-gradient(to right, #b92b27, #1565c0);
   --box-log-color: #2d2d38;
@@ -24,8 +26,9 @@ code {
 
 alert {
   position: absolute;
-  width:40%; margin-top: 40%;
+  width:70vw; margin-top: 40%;
 }
+
 .movePage {
   position: absolute;
 }

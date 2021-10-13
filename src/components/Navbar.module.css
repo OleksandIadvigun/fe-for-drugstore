@@ -1,15 +1,19 @@
 .whiteText{
-    color: #d9892c;
+    color: #46c093;
+    font-family: Comic Sans MS, Comic Sans, cursive;
     text-decoration: none;
     margin-left: 1%;
     transition: color;
+    font-size: 17px;
     transition-duration: 0.9s;
 }
 .whiteText:hover{
-    color: #d5cece;
+    color: #53e5ab;
 
 }
 .animate1{
+
+    margin-left: 8px;
 
     moz-transition: all 1s ease;
 
@@ -33,4 +37,19 @@
 
     transform: rotate(360deg) scale(1.5);
 
+}
+.search{
+    color: #ccccc6;
+    padding: 3px;
+    transition: color;
+    transition-duration: 0.5s;
+}
+
+.search:hover{
+    cursor: pointer;
+    color: #f6f6f3;
+}
+::placeholder {
+    color: #b8b8bb;
+    font-size: 1.0em;
 }

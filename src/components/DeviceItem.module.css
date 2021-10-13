@@ -1,10 +1,25 @@
 
 .marginMobile {
+    cursor: pointer;
+    border: 1px solid #f4f4f6;
+    marginBottom: 30;
+    color: grey;
+    margin-top: 15px;
     margin-right: 12px;
     display: flex;
     justify-content: start;
-    width: 220px
+    width: 220px;
+    border-radius: 8px;
+    transition: all;
+    transition-duration: 0.2s;
 }
+
+.marginMobile:hover {
+    border: 1px solid #c0bebe;
+    box-shadow: 0 0 10px #868a85;
+    /*box-shadow: 2px 2px 2px 2px rgba(250, 247, 247, 0.4);*/
+}
+
 @media (max-device-width: 825px) {
     .marginMobile {
         margin-right: 0;
@@ -12,13 +27,23 @@
     }
 }
 
-.sizeMobile{
-width:210px;
-height:210px;
+.sizeMobile {
+    width: 210px;
+    height: 210px;
 }
+
 @media (max-device-width: 825px) {
-    .sizeMobile{
-        width:165px;
-        height:165px;
+    .sizeMobile {
+        width: 165px;
+        height: 165px;
     }
+}
+
+.cart {
+    transition: all;
+    transition-duration: 0.2s;
+}
+
+.cart:hover {
+    color: #23b99e;
 }

@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import UserStore from "./store/UserStore";
-import DeviceStore from "./store/DeviceStore";
+import ProductStore from "./store/ProductStore";
 import * as PropTypes from "prop-types";
 import AlertTemplate from "react-alert-template-basic";
 import {positions, transitions,Provider as AlertProvider} from "react-alert";
@@ -21,12 +21,26 @@ const options = {
     offset: '30px',
     type: 'error',
     transition: transitions.SCALE,
+    containerStyle: {
+        marginTop: "50px",
+    }
 }
+
+// const AlertTemplate = ({ style, options, message, close }) => (
+//     <div style={{color: 'blue', background: 'green', height: '300px', width: "300px"}}>
+//         {options.type === 'info' && '!'}
+//         {options.type === 'success' && ':)'}
+//         {options.type === 'error' && ':('}
+//         {message}
+//         <button onClick={close}>X</button>
+//     </div>
+// )
+
 ReactDOM.render(
     <AlertProvider template={AlertTemplate}{...options}>
     <Context.Provider value={{
             user: new UserStore(),
-            device: new DeviceStore(),
+            product: new ProductStore(),
         }}>
         <App/>
     </Context.Provider>

@@ -32,5 +32,9 @@ export const publicRoutes = [
     {
         path: BASKET_ROUTE,
         Component: Basket
+    },
+    {
+        path: ADMIN_ROUTE,
+        Component: Admin
     }
 ]

@@ -22,8 +22,8 @@
 main {
     display: flex;
     flex: 1 1 auto;
-    /*height: 92vh;*/
-    /*background: #61dafb;*/
+    min-height: 93.5vh;
+    background: white;
     justify-content: center;
     width: 100%;
 }

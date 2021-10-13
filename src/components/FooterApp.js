@@ -6,10 +6,17 @@ import insta from '../assets/insta.png';
 import instaGrey from '../assets/instaGrey.png';
 import linked from '../assets/linked.png';
 import linkedGrey from '../assets/linkedGrey.png';
+import visa from '../assets/visa.png';
+import master from '../assets/mastercard.png';
 
 export default function FooterApp() {
     return (
         <div className={styles.wrapFooter}>
+            <section className={styles.footerInfoCards} style={{paddingLeft: "4.7vw",marginBottom: 20}}>
+                Payment accepted by:
+                <img src={master} width={100} height={60} style={{marginLeft:30}}/>
+                <img src={visa} width={170} height={100}/>
+            </section>
             <section className={styles.footerInfo}>
                 <section className={styles.footerInfoLeft}>
                     <section className={styles.footerInfoReturns}>

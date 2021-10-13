@@ -1,160 +1,92 @@
-import {Button, Container, Image, Row} from "react-bootstrap";
-import {useContext, useState} from "react";
-import CreateBrand from "../components/modals/CreateBrand";
-import CreateDevice from "../components/modals/CreateDevice";
-import brandImage from '../assets/brand.png'
+import {Button, Row} from "react-bootstrap";
+import {useContext, useEffect, useState} from "react";
+import AddIncomingInvoice from "../components/modals/AddIncomingInvoice";
 import FadeIn from "react-fade-in";
 import styles from './Admin.module.css'
 import {Context} from "../index";
-import CreateType from "../components/modals/CreateType";
-import EditType from "../components/modals/EditType";
-import DeleteType from "../components/modals/DeleteType";
-import EditBrand from "../components/modals/EditBrand";
-import DeleteBrand from "../components/modals/DeleteBrand";
-import DeleteDevice from "../components/modals/DeleteDevice";
-import EditDevice from "../components/modals/EditDevice";
+import {observer} from "mobx-react-lite";
+import ReceiveGoods from "../components/modals/ReceiveGoods";
+import DeliverGoods from "../components/modals/DeliverGoods";
 
-
-
-
-export default function Admin() {
-    const {device} = useContext(Context)
-    const [showModalType, setShowModalType] = useState(false);
-    const [editModalType, setEditModalType] = useState(false);
-    const [deleteModalType, setDeleteModalType] = useState(false);
-    const [showModalBrand, setShowModalBrand] = useState(false);
-    const [editModalBrand, setEditModalBrand] = useState(false);
-    const [deleteModalBrand, setDeleteModalBrand] = useState(false);
-    const [showModalDevice, setShowModalDevice] = useState(false);
-    const [deleteModalDevice, setDeleteModalDevice] = useState(false);
-    const [editModalDevice, setEditModalDevice] = useState(false);
+ const Admin = observer(() => {
+    const {product} = useContext(Context)
+    const [showIncomingInvoice, setShowAddIncomingInvoice] = useState(false);
+    const [showReceiveGoods, setShowReceiveGoods] = useState(false);
+    const [showDeliverGoods, setShowDeliverGoods] = useState(false);
+    useEffect(()=>{
+        console.log(product.orderNumbers)
+    },[product.orderNumbers])
 
     return (
         <FadeIn transitionDuration={800}>
         <div className="d-flex flex-column justify-content-center pt-4" style={{width:'90vw', paddingBottom:150}}>
-            <Row>TYPE</Row>
-            <Button variant="secondary mt-4 p-2 align-self-center"
+            <Row>Accountancy</Row>
+            <Button variant="secondary mt-3  align-self-center"
                     className={styles.buttonWidthMobile}
                     onClick={() => {
-                        setShowModalType(true)
+                        setShowAddIncomingInvoice(true)
                     }}
-            ><i className="large material-icons mt-1 ">add_circle</i>
+            ><div style={{display:"flex", justifyContent:"center"}}>
+                <i className="large material-icons me-1 ">add_circle</i><span>Add incoming invoice</span>
+            </div>
             </Button>
-            <Button variant="secondary mt-4 p-2 align-self-center"
-                    className={styles.buttonWidthMobile}
-                    onClick={() => {
-                        setEditModalType(true)
-                    }}
-            ><i className="large material-icons mt-1 ">edit</i>
-            </Button>
-            <Button variant="secondary mt-4 p-2 align-self-center"
-                    className={styles.buttonWidthMobile}
-                    onClick={() => {
-                        setDeleteModalType(true)
-                    }}
-            ><i className="large material-icons mt-1 ">delete_forever</i>
-            </Button>
-
+            <div style={{marginTop:20}}> Paid incoming orders:
+                {product.orderNumbers.map((el,index)=>
+                    <div style={{ border:"1px #0002 solid", margin:10, textAlign:"start", padding:5,
+                    borderRadius:5}}
+                         key={index}> <span style={{color:"lightGreen"}}>{index+1}
+                         </span> order number:<span style={{marginLeft:"50px"}}> {el}</span>
+                    </div>
+                )}
+            </div>
             <hr className="mt-5"/>
-            <Row>BRAND</Row>
+            <Row>Store</Row>
+            <Button variant="secondary mt-3  align-self-center"
+                    className={styles.buttonWidthMobile}
+                    onClick={() => {
+                        setShowReceiveGoods(true)
+                    }}
+
+            ><div style={{display:"flex", justifyContent:"center"}}>
+                <i className="large material-icons me-1">add_circle</i><span>Receive goods</span>
+            </div></Button>
+
             <Button variant="secondary mt-4 align-self-center"
                     className={styles.buttonWidthMobile}
                     onClick={() => {
-                        setShowModalBrand(true)
-                    }}
-            ><i className="large material-icons mt-1 ">add_circle</i></Button>
-            <Button variant="secondary mt-4 align-self-center"
-                    className={styles.buttonWidthMobile}
-                    onClick={() => {
-                        setEditModalBrand(true)
-                    }}
-            ><i className="large material-icons mt-1 ">edit</i></Button>
-            <Button variant="secondary mt-4  align-self-center"
-                    className={styles.buttonWidthMobile}
-                    onClick={() => {
-                        setDeleteModalBrand(true)
-                    }}
-            > <i className="large material-icons mt-1 ">delete_forever</i> </Button>
-
-            <hr className="mt-5"/>
-            <Row>DEVICE</Row>
-            <Button variant="secondary mt-4 p-2 align-self-center"
-                    className={styles.buttonWidthMobile}
-                    onClick={() => {
-                        setShowModalDevice(true)
+                        setShowDeliverGoods(true)
                     }}
 
-            ><i className="large material-icons mt-1 ">add_circle</i></Button>
-            <Button variant="secondary mt-4 p-2 align-self-center"
-                    className={styles.buttonWidthMobile}
-                    onClick={() => {
-                        setEditModalDevice(true)
-                    }}
-
-            ><i className="large material-icons mt-1">edit</i></Button>
-            <Button variant="secondary mt-4 p-2 align-self-center"
-                    className={styles.buttonWidthMobile}
-                    onClick={() => {
-                        setDeleteModalDevice(true)
-                    }}
-
-            ><i className="large material-icons mt-1">delete_forever</i></Button>
-
-            <CreateType show={showModalType}
-                        onHide={() => {
-                            setShowModalType(false)
+            ><div style={{display:"flex", justifyContent:"center"}}>
+                <i className="large material-icons me-1">edit</i><span>Deliver goods</span>
+            </div>
+            </Button>
+            <div style={{marginTop:20}}> Paid outcoming orders:
+                {product.orderBought.map((el,index)=>
+                    <div style={{ border:"1px #0002 solid", margin:10, textAlign:"start", padding:5,
+                        borderRadius:5}}
+                         key={index}> <span style={{color:"lightGreen"}}>{index+1}
+                         </span> order number:<span style={{marginLeft:"50px"}}> {el}</span>
+                    </div>
+                )}
+            </div>
+            <AddIncomingInvoice show={showIncomingInvoice}
+                                onHide={() => {
+                            setShowAddIncomingInvoice(false)
                         }}
             />
-            <EditType show={editModalType}
+            <ReceiveGoods show={showReceiveGoods}
                         onHide={() => {
-                            setEditModalType(false)
-                            device.setSelectedType('')
+                            setShowReceiveGoods(false)
                         }}
             />
-            <DeleteType show={deleteModalType}
-                      onHide={() => {
-                          setDeleteModalType(false)
-                          device.setSelectedType('')
-                      }}
-            />
-            <CreateBrand show={showModalBrand}
-                         onHide={() => {
-                             setShowModalBrand(false)
-                         }}/>
-            <EditBrand show={editModalBrand}
-                         onHide={() => {
-                             setEditModalBrand(false)
-                             device.setSelectedBrand('')
-                         }}/>
-            <DeleteBrand show={deleteModalBrand}
-                         onHide={() => {
-                             setDeleteModalBrand(false)
-                             device.setSelectedBrand('')
-                         }}/>
-            <CreateDevice show={showModalDevice}
+            <DeliverGoods show={showDeliverGoods}
                           onHide={() => {
-                              setShowModalDevice(false)
-                              device.setSelectedBrand('')
-                              device.setSelectedType('')
-                          }}
-            />
-            <DeleteDevice show={deleteModalDevice}
-                          onHide={() => {
-                              setDeleteModalDevice(false)
-                              device.setSelectedDevice('')
-                              device.setSelectedBrand('')
-                              device.setSelectedType('')
-                          }}
-            />
-            <EditDevice show={editModalDevice}
-                          onHide={() => {
-                              setEditModalDevice(false)
-                              device.setSelectedDevice('')
-                              device.setSelectedBrand('')
-                              device.setSelectedType('')
+                              setShowDeliverGoods(false)
                           }}
             />
         </div>
         </FadeIn>
     );
-}
+})
+export default Admin

@@ -8,10 +8,10 @@ import '../index.css'
 import styles from './DeviceList.module.css'
 
 const DeviceList = observer(() => {
-    const {device} = useContext(Context)
+    const {product} = useContext(Context)
   return (
     <div className={`d-flex flex-wrap  ${styles.flexCenterMobile}`}>
-        {device.devices.map((item,index)=>
+        {product.products.map((item,index)=>
           <DeviceItem item={item} key={index}/>
         )}
     </div>

@@ -1,4 +1,5 @@
 import {Spinner} from "react-bootstrap";
 
-export const MySpinner = <Spinner animation={"grow"} className="position-absolute" style={{marginTop: '48vh',marginLeft:'49vw'}}/>
+export const MySpinner = <Spinner animation="border" variant="warning" className="position-relative" size="gm" />
 
+//style={{marginTop: '43vh'}}

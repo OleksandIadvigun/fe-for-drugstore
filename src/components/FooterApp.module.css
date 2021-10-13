@@ -2,7 +2,7 @@
     background: #222228;
     color: #d5cece;
     font-size: medium;
-    padding: 30px;
+    padding: 50px;
 }
 
 
@@ -99,17 +99,29 @@
 .elementCenter{
     padding-top: 1px;
     padding-bottom: 5px;
+    transition: all;
+    transition-duration: 0.1s;
 }
 .elementCenter:hover{
     cursor: pointer;
-    color: #d26b09;
+    color: #e7e3e3;
+    text-decoration:underline;
 }
 .footerInfoName, .footerInfoReturns {
     text-align: start;
+    transition: all;
+    transition-duration: 0.1s;
 }
+.footerInfoCards {
+    text-align: start;
+    transition: all;
+    transition-duration: 0.1s;
+}
+
 .footerInfoReturns:hover{
     cursor: pointer;
-    color: #d26b09;
+    color: #e7e3e3;
+    text-decoration: underline;
 }
 .footerInfoReturns{
     margin-bottom: 6px;
@@ -132,16 +144,20 @@
     width: fit-content;
     /*text-align: center;*/
     align-self: start;
+    transition: all;
+    transition-duration: 0.1s;
 }
 /*@media(max-device-width: 678px) {*/
 @media(max-device-width: 850px) {
     .footerInfoContact{
         align-self: center;
         width: fit-content;
+        transition: all;
+        transition-duration: 0.1s;
     }
 }
 .footerInfoContact:hover{
-    color: #d26b09;
+    color: #3b9f2f;
     cursor: pointer;
 }
 .footerDate {
